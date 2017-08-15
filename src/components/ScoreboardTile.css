@@ -1,0 +1,20 @@
+.scoreboard-tile {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 20px;
+  margin-right: .2em;
+  position: relative;
+  width: 20px;
+}
+
+.color-fill {
+  border-radius: 50%;
+  height: inherit;
+  opacity: 0;
+  transition: opacity .5s ease;
+  width: inherit;
+}
+
+.color-fill.matched {
+  opacity: 1;
+}

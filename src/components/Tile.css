@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Miniver');
+
+.tile {
+  align-items: center;
+  border: solid 1px black;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Miniver';
+  font-size: 1.4vw;
+  letter-spacing: 1vw;
+  justify-content: center;
+  min-height: calc(100% * (1/4) - 2px);
+  min-width: calc(100% * (1/4) - 2px);
+}
