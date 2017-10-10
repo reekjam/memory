@@ -32,7 +32,7 @@ export default class Board extends React.Component {
       activeTiles[0]['color'] === activeTiles[1]['color'] &&
       activeTiles[0]['id'] !== activeTiles[1]['id']
     ) {
-      clickHandlerCallback(activeTiles);
+      clickHandlerCallback(activeTiles[0]['color']);
     };
   }
 
@@ -47,7 +47,7 @@ export default class Board extends React.Component {
           color={tile}
           handleClickCallback={this.clickCallback}
           id={i}
-          isMatched={matchedTiles.map(tile => tile.color).includes(tile)}
+          isMatched={matchedTiles.includes(tile)}
           key={i}
           matchedTiles={matchedTiles}
         />

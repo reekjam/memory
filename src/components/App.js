@@ -17,11 +17,11 @@ class App extends Component {
     this.setMatchedTiles = this.setMatchedTiles.bind(this);
   }
 
-  setMatchedTiles(tiles) {
+  setMatchedTiles(tile) {
     const { matchedTiles } = this.state;
 
     this.setState({
-      matchedTiles: [...matchedTiles, ...tiles]
+      matchedTiles: [...matchedTiles, tile]
     });
   }
 

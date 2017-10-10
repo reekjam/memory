@@ -7,10 +7,8 @@ export default class Scoreboard extends React.Component {
   render() {
     const { matchedTiles } = this.props;
 
-    const scoreboardTiles = colors.map(color => {
-      const isMatched = matchedTiles.map(tile => tile.color).includes(color);
-       
-      return <ScoreboardTile isMatched={isMatched} color={color} />
+    const scoreboardTiles = colors.map((color, i) => {
+      return <ScoreboardTile index={i} key={`${color}-${i}`} matchedTiles={matchedTiles} />
     });
 
     return (

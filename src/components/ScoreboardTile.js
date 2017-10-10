@@ -3,12 +3,12 @@ import './ScoreboardTile.css';
 
 export default class ScoreboardTile extends React.Component {
   render() {
-    const { color, isMatched } = this.props;
-    const matchedClass = isMatched ? 'matched' : '';
+    const { index, matchedTiles } = this.props;
+    const matchedClass = matchedTiles[index] ? 'matched' : '';
 
     return (
       <div className='scoreboard-tile'>
-        <div className={`color-fill ${matchedClass}`} style={{ backgroundColor: color }}></div>
+        <div className={`color-fill ${matchedClass}`} style={{ backgroundColor: matchedTiles[index] }}></div>
       </div>
     )
   }
