@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Miniver');
-
 .tile {
   align-items: center;
   border: solid 1px black;
-  color: white;
   cursor: pointer;
   display: flex;
   flex-flow: row wrap;
-  font-family: 'Miniver';
   font-size: 1.4vw;
   letter-spacing: 1vw;
   justify-content: center;
   min-height: calc(100% * (1/4) - 2px);
   min-width: calc(100% * (1/4) - 2px);
+  transition: background-color 1s ease;
+}
+
+.tile span {
+  color: white;
+  transition: color 1s ease;
+}
+
+@media (max-width: 480px) {
+  .tile {
+    font-size: 1em;
+    letter-spacing: .5em;
+    min-height: calc(100% * (1/9) - 2px);
+    min-width: calc(100% * (1/2) - 2px);
+  }
 }

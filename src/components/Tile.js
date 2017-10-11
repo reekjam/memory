@@ -16,7 +16,7 @@ export default class Tile extends React.Component {
   }
 
   render() {
-    const { activeTiles, color, id, isMatched, matchedTiles } = this.props;
+    const { activeTiles, color, id, isMatched } = this.props;
 
     const activeStyle = {
       backgroundColor: activeTiles.filter(tile => tile.id === id).length ? color : 'transparent'

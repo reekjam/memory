@@ -7,12 +7,21 @@ export default class Board extends React.Component {
     super(props);
 
     this.state = {
-      activeTiles: [],
-      matchedTiles: [],
+      activeTiles: []
     }
 
     this.clickCallback = this.clickCallback.bind(this);
     this.checkIfMatch = this.checkIfMatch.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { gameOver } = nextProps;
+
+    if (gameOver) {
+      this.setState({
+        activeTiles: []
+      });
+    };
   }
 
   clickCallback(data) {
@@ -23,7 +32,7 @@ export default class Board extends React.Component {
 
   checkIfMatch(data) {
     const { clickHandlerCallback } = this.props;
-    const { activeTiles, matchedTiles } = this.state;
+    const { activeTiles } = this.state;
 
     if (activeTiles.length > 2) {
       this.setState({ activeTiles: [data] });

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Miniver');
+
 body, html, #root {
+  font-family: 'Miniver';
   height: 100%;
 }
 
